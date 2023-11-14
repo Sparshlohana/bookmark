@@ -54,7 +54,6 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;
-    position: relative;
 }
 
 .container {
@@ -63,6 +62,7 @@
     background-color: rgba(33, 33, 33, 0.84);
     color: #fff;
     border-radius: 10px;
+    position: relative;
 }
 
 .heading {
@@ -72,13 +72,70 @@
 
 .bookMarkContainerMain {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
     margin-top: 5px;
+    height: 390px;
+    max-height: 400px;
+    overflow-y: auto;
+    width: 100%;
 }
 
-.buttonContainer{
 
+.bookMarkContainerMain::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.bookMarkContainerMain::-webkit-scrollbar-thumb {
+    background: #4e4c4d;
+    border-radius: 10px;
+}
+
+.bookmarkContainer {
+    width: 100%;
+}
+
+.buttonContainer {
+    text-align: center;
+    width: 100%;
+}
+
+.bookmarkItems {
+    text-align: center;
+    transition: 0.5s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.bookmarkItems:hover {
+    background: rgba(82, 80, 80, 0.66);
+}
+
+.submitBtn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    background: #525050a8;
+}
+
+@media (max-width: 440px) {
+    .navUl {
+        gap: 0;
+    }
+    .navItems{
+        padding: 10px;
+    }
+    .navAnchor {
+        font-size: 1.2rem;
+    }
+    .container{
+        width: 305px;
+    }
 }
